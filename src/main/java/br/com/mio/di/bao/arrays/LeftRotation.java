@@ -1,11 +1,5 @@
 package br.com.mio.di.bao.arrays;
 
-import java.io.*;
-import java.util.*;
-import java.text.*;
-import java.math.*;
-import java.util.regex.*;
-
 public class LeftRotation {
 
     public static int[] arrayLeftRotation(int[] a, int n, int k) {

@@ -29,7 +29,6 @@ public class DetectACycle {
 }
 
 
-
 class Node {
     int data;
     Node next;

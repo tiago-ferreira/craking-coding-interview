@@ -5,24 +5,22 @@ import java.util.Stack;
 public class BalancedBrackets {
     
     public static boolean isBalanced(String expression) {
-    	if (expression.length()  == 1 || (expression.length() % 2) != 0 ) {
+    	if(expression.length() == 1 || (expression.length() % 2) != 0) {
     		return false;
     	}
     	Stack<Character> stack = new Stack<>();
-		for (char value : expression.toCharArray()) {
-			if (value == '(') {
-				stack.push(')');
-			} else if (value == '{') {
-				stack.push('}');
-			} else if (value == '[') {
-				stack.push(']');
-			} else {
-				if (stack.empty() || value != stack.peek()) {
-					return false;
-				}
-				stack.pop();
-			}
-		}
+    	for(char value : expression.toCharArray()) {
+    		switch(value) {
+    		case '(': stack.push(')'); break;
+    		case '{': stack.push('}'); break;
+    		case '[': stack.push(']'); break;
+    		default:
+    			if(stack.empty() || value != stack.peek()) {
+    				return false;
+    			}
+    			stack.pop();
+    		}
+    	}
     	return stack.empty();
     }
   

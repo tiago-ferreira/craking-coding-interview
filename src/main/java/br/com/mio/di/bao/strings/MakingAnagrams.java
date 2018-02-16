@@ -11,7 +11,7 @@ public class MakingAnagrams {
         	alphabetLetters[letters - 'a']--;
         }
         for(int value : alphabetLetters) {
-        	count += Math.abs(value);
+        	count += abs(value);
         }
         return count;
     }
@@ -21,12 +21,8 @@ public class MakingAnagrams {
     }
   
     public static void main(String[] args) {
-//        Scanner in = new Scanner(System.in);
-    	Long begin = System.currentTimeMillis();
-        String a = "cde";//in.next();
-        String b = "abc";//in.next();
+        String a = "cde";
+        String b = "abc";
         System.out.println(numberNeeded(a, b));
-        Long end = System.currentTimeMillis();
-        System.out.println("Time is: "+(begin - end));
     }
 }
